@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "id": "1866ddic9",
+      "xp": 115,
+      "streakCount": 1,
+      "lastActiveDate": "2026-07-15",
+      "badges": [
+        "first_program",
+        "course_starter",
+        "xp_100"
+      ],
+      "name": "Tester",
+      "email": "tester@test.com",
+      "password": "$2a$10$GVkrYg/qq5mpRm6HDjPx7eCZqEqAlS6yR9ZFNtTI4X5TV2G7ibs6K"
+    },
+    {
+      "id": "f8htgcrpd",
+      "xp": 110,
+      "streakCount": 2,
+      "lastActiveDate": "2026-07-16",
+      "badges": [
+        "first_program",
+        "course_starter",
+        "xp_100"
+      ],
+      "name": "Alex volkov",
+      "email": "alexvolkov0506@gmail.com",
+      "password": "$2a$10$SbweHSqAmtG6a1Vb1FOXQe3hai1CCww17BNaaBpciTYh7jKn40UFa",
+      "avatarEmoji": "🚀"
+    }
+  ],
+  "progress": [
+    {
+      "userId": "1866ddic9",
+      "courseId": "python",
+      "completedLessons": [
+        "python_w1_l1"
+      ],
+      "quizScores": {},
+      "completedProjects": [],
+      "completionPercent": 13,
+      "certificateGenerated": false,
+      "certificateId": null
+    },
+    {
+      "userId": "f8htgcrpd",
+      "courseId": "python",
+      "completedLessons": [
+        "python_w1_l1"
+      ],
+      "quizScores": {},
+      "completedProjects": [],
+      "completionPercent": 13,
+      "certificateGenerated": false,
+      "certificateId": null
+    }
+  ]
+}

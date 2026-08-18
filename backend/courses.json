@@ -1,0 +1,402 @@
+[
+  {
+    "id": "python",
+    "name": "Python for Absolute Beginners",
+    "icon": "🐍",
+    "description": "Learn programming with Python, the most beginner-friendly language. We use real-world analogies like kitchen recipes, jars, and traffic lights to explain concepts.",
+    "difficulty": "Beginner",
+    "xp": 300,
+    "weeks": [
+      {
+        "weekNumber": 1,
+        "title": "Week 1: Python Basics",
+        "lessons": [
+          {
+            "id": "python_w1_l1",
+            "title": "Welcome to Python: The Friendly Snake",
+            "analogyTitle": "The Obedient Assistant",
+            "analogyText": "Imagine a helper who follows instructions literally. If you say 'make toast,' they don't know how. You have to explain: 'Take bread, put in toaster, press lever.' Python is that assistant! Coding is just writing clear recipe-like instructions.",
+            "content": "Python is a language designed to be readable. It looks a lot like normal English! It is used in web design, AI, data analysis, and automation. To show text on screen, we use the `print()` function.",
+            "codeExample": "# Tell your assistant to say hi!\nprint(\"Hello, CodeVerse!\")",
+            "practiceTask": "Write a line of code to print your name to the console.",
+            "practiceHint": "Use print(\"Your Name\")",
+            "defaultCode": "print(\"\")",
+            "expectedOutput": ".+"
+          },
+          {
+            "id": "python_w1_l2",
+            "title": "Jars & Labels: Variables & Types",
+            "analogyTitle": "Kitchen Storage Jars",
+            "analogyText": "Variables are like jars with sticky labels. If you label a jar 'cookies' and put 5 cookies inside, you can later ask for 'cookies' and get 5. If you put fresh cookies in, the old ones are replaced. In Python, `cookies = 5` creates that jar!",
+            "content": "A variable is a container for storing data. Python has different types of data: String (text in quotes, like \"cookies\"), Integer (whole numbers, like 5), and Float (decimals, like 5.9).",
+            "codeExample": "# Label the jar 'age' and put 25 in it\nage = 25\n\n# Label another jar 'name' and put 'Alex' in it\nname = \"Alex\"\n\nprint(name)\nprint(age)",
+            "practiceTask": "Create a variable named `favorite_food` and assign it your favorite food as a string. Then print it.",
+            "practiceHint": "favorite_food = \"Pizza\"\nprint(favorite_food)",
+            "defaultCode": "# Set favorite_food here\n\n# Print it here",
+            "expectedOutput": ".+"
+          },
+          {
+            "id": "python_w1_l3",
+            "title": "Talking & Listening: Input & Output",
+            "analogyTitle": "Megaphone and Ear Trumpet",
+            "analogyText": "Using `print()` is like speaking through a megaphone—the computer tells you something. Using `input()` is like holding a cup to your ear (ear trumpet)—the computer stops, waits, and listens to what you type, storing it inside a jar (variable).",
+            "content": "To get information from a user, we use the `input()` function. It pauses code execution and waits for the user to type something. What they type is returned as a string.",
+            "codeExample": "print(\"What is your secret superpower?\")\npower = input()\nprint(\"Awesome! Your power is: \" + power)",
+            "practiceTask": "Write a program that asks the user for their favorite color and prints: 'Your color is [color]'.",
+            "practiceHint": "color = input()\nprint(\"Your color is \" + color)",
+            "defaultCode": "print(\"What is your favorite color?\")\n# Read color and print the message",
+            "expectedOutput": ".+"
+          }
+        ]
+      },
+      {
+        "weekNumber": 2,
+        "title": "Week 2: Decisions & Repetitions",
+        "lessons": [
+          {
+            "id": "python_w2_l1",
+            "title": "The Fork in the Road: Conditionals",
+            "analogyTitle": "The Traffic Light Decision",
+            "analogyText": "When driving, if the light is green, you GO. If it is yellow, you SLOW. Else (red), you STOP. In Python, `if`, `elif` (else if), and `else` let your code make decisions just like a driver at a traffic light.",
+            "content": "We use conditional statements to perform different actions based on conditions. Conditions evaluate to True or False. We use indentation (spaces) to show which code belongs inside the decision blocks.",
+            "codeExample": "light = \"red\"\n\nif light == \"green\":\n    print(\"GO!\")\nelif light == \"yellow\":\n    print(\"Caution! Slow down.\")\nelse:\n    print(\"STOP!\")",
+            "practiceTask": "Write a program where a variable `score` is compared. If score is 50 or more, print 'Pass', else print 'Fail'.",
+            "practiceHint": "Use: if score >= 50: ... else: ...",
+            "defaultCode": "score = 75\n# Check score and print Pass or Fail",
+            "expectedOutput": "Pass"
+          },
+          {
+            "id": "python_w2_l2",
+            "title": "The Hamster Wheel: Loops",
+            "analogyTitle": "Brushing Your Teeth",
+            "analogyText": "You don't brush a single tooth once and stop. You brush a tooth, check if your teeth are clean, and repeat. You do this in a loop until you are done. In Python, loops repeat code while a condition is true, or for a set list of items.",
+            "content": "Python has two main loops: `for` loops (best for repeating over a list or range) and `while` loops (best for repeating until a condition changes).",
+            "codeExample": "# Loop over a range (repeats 3 times: 0, 1, 2)\nfor index in range(3):\n    print(\"Brushing tooth number:\", index)\n\n# While loop\ncount = 3\nwhile count > 0:\n    print(\"Countdown:\", count)\n    count = count - 1",
+            "practiceTask": "Write a loop that prints the phrase 'Repeat' 5 times.",
+            "practiceHint": "Use: for i in range(5): print(\"Repeat\")",
+            "defaultCode": "# Loop 5 times to print 'Repeat'",
+            "expectedOutput": "Repeat"
+          },
+          {
+            "id": "python_w2_l3",
+            "title": "The Recipe Book: Functions",
+            "analogyTitle": "Baking Cake Presets",
+            "analogyText": "Instead of writing down the recipe for baking a chocolate cake every time a customer orders it, you save it in a recipe book. Now, whenever an order comes in, you simply call the 'Bake Cake' recipe! In Python, `def` defines a recipe, and calling it executes it.",
+            "content": "Functions are reusable blocks of code that run when called. They can take inputs (parameters) and return outputs (results). They keep code organized and prevent copy-pasting.",
+            "codeExample": "# Define our cake-baking recipe\ndef bake_cake(flavor):\n    return \"A delicious \" + flavor + \" cake is ready!\"\n\n# Call our recipe\nresult = bake_cake(\"chocolate\")\nprint(result)",
+            "practiceTask": "Define a function named `greet` that takes a parameter `user_name` and returns 'Hello ' + user_name. Call it with 'Veda' and print the output.",
+            "practiceHint": "def greet(user_name):\n    return \"Hello \" + user_name\nprint(greet(\"Veda\"))",
+            "defaultCode": "# Define greet and print greet(\"Veda\")",
+            "expectedOutput": "Hello Veda"
+          }
+        ]
+      },
+      {
+        "weekNumber": 3,
+        "title": "Week 3: Projects & Dictionaries",
+        "lessons": [
+          {
+            "id": "python_w3_l1",
+            "title": "Labels & Values: Dictionaries",
+            "analogyTitle": "Real-World Dictionary or Contacts List",
+            "analogyText": "A contact list on your phone connects a name (Key) to a phone number (Value). You lookup 'Mom' to get her number. You don't scroll through list item #27; you lookup the key directly. A Python dictionary does exactly this!",
+            "content": "Dictionaries store key-value pairs. They are written inside curly braces `{}` and values are accessed by putting their key inside square brackets `[]`.",
+            "codeExample": "contacts = {\n    \"Mom\": \"555-0199\",\n    \"Dad\": \"555-0123\"\n}\n\n# Lookup contact\nprint(contacts[\"Mom\"])\n\n# Add new contact\ncontacts[\"Alex\"] = \"555-9876\"\nprint(contacts)",
+            "practiceTask": "Create a dictionary named `inventory` with key 'apples' valued at 10. Change the value of 'apples' to 15, and print it.",
+            "practiceHint": "inventory = {'apples': 10}\ninventory['apples'] = 15\nprint(inventory['apples'])",
+            "defaultCode": "# Create dictionary, modify apples, and print inventory['apples']",
+            "expectedOutput": "15"
+          },
+          {
+            "id": "python_w3_l2",
+            "title": "Project: Password Generator & Game",
+            "analogyTitle": "Building the Toy",
+            "analogyText": "Up until now, you've been learning how to use hammers, nails, and glue. Now, you're going to combine them all to build a toy chest! Building a mini project puts everything you've learned together in a real working application.",
+            "content": "Let's review the Calculator code. It uses input, loops, conversions, and functions. Look at the code, play with it in the terminal, and tweak it!",
+            "codeExample": "def calculator():\n    print(\"--- CodeVerse Calculator ---\")\n    num1 = float(input(\"Enter first number: \"))\n    op = input(\"Enter operation (+, -): \")\n    num2 = float(input(\"Enter second number: \"))\n    \n    if op == \"+\":\n        return num1 + num2\n    elif op == \"-\":\n        return num1 - num2\n    else:\n        return \"Invalid Operator\"\n\n# Simulating calculator\nprint(\"Result:\", calculator())",
+            "practiceTask": "Modify the code playground to return the sum of 50 and 15 using variables.",
+            "practiceHint": "a = 50\nb = 15\nprint(a + b)",
+            "defaultCode": "# Print sum of 50 and 15",
+            "expectedOutput": "65"
+          }
+        ],
+        "quiz": {
+          "id": "python_quiz",
+          "title": "Python Final Quiz",
+          "questions": [
+            {
+              "type": "mcq",
+              "question": "Which of the following is a correct variable declaration in Python?",
+              "options": [
+                "int x = 5",
+                "x = 5",
+                "var x = 5",
+                "declare x = 5"
+              ],
+              "answer": "x = 5",
+              "explanation": "Python is dynamically typed, meaning you do not need to specify the variable type. You just write the name and assign the value!"
+            },
+            {
+              "type": "prediction",
+              "question": "What will be the output of the following code snippet?\n\n```python\nx = 10\nif x > 5:\n    print('Apple')\nelse:\n    print('Orange')\n```",
+              "options": [
+                "Apple",
+                "Orange",
+                "10",
+                "Error"
+              ],
+              "answer": "Apple",
+              "explanation": "Since 10 is greater than 5, the condition x > 5 is True, and the code inside the 'if' block executes, printing 'Apple'."
+            },
+            {
+              "type": "debugging",
+              "question": "Identify and fix the bug in this function that is supposed to double a number:\n\n```python\ndef double_it(num)\n    return num * 2\n```",
+              "options": [
+                "Missing colon ':' after (num)",
+                "The parameter 'num' must be 'int num'",
+                "Should use 'def double_it[num]'",
+                "The word 'return' is misspelled"
+              ],
+              "answer": "Missing colon ':' after (num)",
+              "explanation": "In Python, defining a function requires a colon ':' at the end of the header statement (e.g., `def double_it(num):`)."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c",
+    "name": "C Programming: The Engine",
+    "icon": "⚙️",
+    "description": "Learn C, the language that powers operating systems and game engines. Understand compiler basics, variables, loops, arrays, and memory pointers.",
+    "difficulty": "Intermediate",
+    "xp": 350,
+    "weeks": [
+      {
+        "weekNumber": 1,
+        "title": "Week 1: Engine Foundations",
+        "lessons": [
+          {
+            "id": "c_w1_l1",
+            "title": "Welcome to C: Engine Room",
+            "analogyTitle": "The Blueprint and construction",
+            "analogyText": "Python is like telling a butler: 'Make a sandwich.' The butler handles the details. C is like designing the kitchen robot itself: you tell it which gear to spin, how much force to apply, and how much power to consume. C is closer to the hardware!",
+            "content": "C is a compiled language, meaning a compiler translates your code into computer binary instructions before running. Every C program starts execution from the `main()` function.",
+            "codeExample": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, CodeVerse!\");\n    return 0;\n}",
+            "practiceTask": "Write a main function that prints: 'C is fast!'",
+            "practiceHint": "#include <stdio.h>\nint main() {\n    printf(\"C is fast!\");\n    return 0;\n}",
+            "defaultCode": "#include <stdio.h>\n\nint main() {\n    // Code here\n    return 0;\n}",
+            "expectedOutput": "C is fast!"
+          },
+          {
+            "id": "c_w1_l2",
+            "title": "Locking Types: Declaring Variables",
+            "analogyTitle": "Rigid Sorting Cabinets",
+            "analogyText": "In Python, a jar can hold cookies today and tea tomorrow. In C, jars are rigid sorting cabinets. If you build an 'Integer cabinet,' it can ONLY hold integers. Try to put a word in it, and the robot constructor (compiler) will sound an alarm and halt build!",
+            "content": "In C, you must specify the exact data type of a variable when declaring it. Common types include: `int` (whole numbers), `float` (decimals), and `char` (a single letter/symbol).",
+            "codeExample": "#include <stdio.h>\n\nint main() {\n    int age = 30;\n    float speed = 12.5;\n    char initial = 'C';\n    \n    printf(\"Age is %d\\n\", age);\n    return 0;\n}",
+            "practiceTask": "Declare an integer variable named `score` and assign it the value 99. Then print it using `%d`.",
+            "practiceHint": "int score = 99;\nprintf(\"%d\", score);",
+            "defaultCode": "#include <stdio.h>\n\nint main() {\n    // Declare score and print it\n    return 0;\n}",
+            "expectedOutput": "99"
+          }
+        ]
+      },
+      {
+        "weekNumber": 2,
+        "title": "Week 2: Controlling the Gears",
+        "lessons": [
+          {
+            "id": "c_w2_l1",
+            "title": "Loops in Machine Speed",
+            "analogyTitle": "The Factory Conveyor Belt",
+            "analogyText": "A factory loop moves box after box. In C, loops execute incredibly fast because they compile straight to machine operations. The compiler translates your `for(int i=0; i<100; i++)` into simple index-register increments.",
+            "content": "C loops use similar logic to other languages: `for`, `while`, and `do-while` loops are standard. Variables must be declared before or inside the loop initialization.",
+            "codeExample": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 3; i++) {\n        printf(\"Conveyor belt step: %d\\n\", i);\n    }\n    return 0;\n}",
+            "practiceTask": "Write a C loop that counts from 1 to 5, printing each number.",
+            "practiceHint": "for(int i=1; i<=5; i++) { printf(\"%d\", i); }",
+            "defaultCode": "#include <stdio.h>\n\nint main() {\n    // Write loop counting 1 to 5\n    return 0;\n}",
+            "expectedOutput": ".*1.*2.*3.*4.*5.*"
+          }
+        ]
+      },
+      {
+        "weekNumber": 3,
+        "title": "Week 3: Memory and Pointers",
+        "lessons": [
+          {
+            "id": "c_w3_l1",
+            "title": "Street Addresses: Pointers",
+            "analogyTitle": "House Addresses vs The House itself",
+            "analogyText": "If you have a treasure chest, you can carry it around (heavy!). Or, you can write down its street address: '742 Evergreen Terrace.' Passing the address is fast and lets someone open the chest directly. In C, a Pointer `*p` stores the memory address of a variable.",
+            "content": "Pointers are variables that store the memory address of another variable. We use the address-of operator `&` to find where a variable lives, and the dereference operator `*` to look inside the address.",
+            "codeExample": "#include <stdio.h>\n\nint main() {\n    int treasure = 100;\n    int *ptr = &treasure; // ptr stores address of treasure\n    \n    printf(\"Address of treasure: %p\\n\", ptr);\n    printf(\"Value at address: %d\\n\", *ptr);\n    return 0;\n}",
+            "practiceTask": "Create an integer variable `val = 42`, a pointer `ptr` pointing to it, and print the value pointed to by `ptr` using `*ptr`.",
+            "practiceHint": "int val = 42; int *ptr = &val; printf(\"%d\", *ptr);",
+            "defaultCode": "#include <stdio.h>\n\nint main() {\n    // Create val, create ptr, and print value using pointer\n    return 0;\n}",
+            "expectedOutput": "42"
+          }
+        ],
+        "quiz": {
+          "id": "c_quiz",
+          "title": "C programming quiz",
+          "questions": [
+            {
+              "type": "mcq",
+              "question": "Which header file is required to use the standard printf() and scanf() functions in C?",
+              "options": [
+                "<conio.h>",
+                "<stdlib.h>",
+                "<stdio.h>",
+                "<string.h>"
+              ],
+              "answer": "<stdio.h>",
+              "explanation": "<stdio.h> stands for 'Standard Input/Output Header' and contains declarations for standard I/O methods like printf."
+            },
+            {
+              "type": "prediction",
+              "question": "What is the output of the following C code?\n\n```c\nint a = 10;\nint *p = &a;\n*p = 20;\nprintf(\"%d\", a);\n```",
+              "options": [
+                "10",
+                "20",
+                "Address of a",
+                "Error"
+              ],
+              "answer": "20",
+              "explanation": "Because pointer p stores the address of a, modifying *p (the value at address p) changes the actual variable a to 20."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "cpp",
+    "name": "C++: The Lego Builder",
+    "icon": "🧱",
+    "description": "Master C++ and Object-Oriented Programming (OOP). Learn classes, objects, inheritance, and how to build structured templates.",
+    "difficulty": "Intermediate",
+    "xp": 350,
+    "weeks": [
+      {
+        "weekNumber": 1,
+        "title": "Week 1: Object Blueprints",
+        "lessons": [
+          {
+            "id": "cpp_w1_l1",
+            "title": "Introduction to Classes and Objects",
+            "analogyTitle": "The Blueprint and the Lego Car",
+            "analogyText": "A class is like an architectural blueprint. It defines: 'This object has wheels, doors, and a color.' It is not a real car yet. An object is the actual physical car built using that blueprint. You can build 5 different cars (objects) from one blueprint (class)!",
+            "content": "C++ extends C by adding Object-Oriented Programming support. A Class wraps variables (attributes) and functions (methods) into a single blueprint.",
+            "codeExample": "#include <iostream>\nusing namespace std;\n\nclass Car {\npublic:\n    string color;\n    void honk() {\n        cout << \"Beep Beep!\" << endl;\n    }\n};\n\nint main() {\n    Car myCar; // Build the object\n    myCar.color = \"Red\";\n    myCar.honk();\n    return 0;\n}",
+            "practiceTask": "Create a class `Dog` with a public method `bark` that prints 'Woof!'. Instantiate it in `main` and call `bark`.",
+            "practiceHint": "class Dog { public: void bark() { cout << \"Woof!\"; } };\nint main() { Dog d; d.bark(); }",
+            "defaultCode": "#include <iostream>\nusing namespace std;\n\n// Define class Dog here\n\nint main() {\n    // Create dog object and call bark()\n    return 0;\n}",
+            "expectedOutput": "Woof!"
+          }
+        ]
+      },
+      {
+        "weekNumber": 2,
+        "title": "Week 2: Advanced Blueprints",
+        "lessons": [
+          {
+            "id": "cpp_w2_l1",
+            "title": "Inheritance: Passing the Traits",
+            "analogyTitle": "Family DNA",
+            "analogyText": "Imagine a general blueprint for a 'Vehicle' (has speed, brand, and a start method). Instead of rewriting those traits for a 'Truck' and a 'Bicycle', the Truck simply 'inherits' them from Vehicle and adds its own custom trait: 'cargoCapacity'. C++ inheritance does exactly this!",
+            "content": "Inheritance allows a child class to inherit attributes and methods of a parent class. It reduces code duplication.",
+            "codeExample": "#include <iostream>\nusing namespace std;\n\nclass Vehicle {\npublic:\n    string brand = \"Ford\";\n    void honk() { cout << \"Tuut!\\n\"; }\n};\n\n// Truck inherits from Vehicle\nclass Truck : public Vehicle {\npublic:\n    int cargoCapacity = 5000;\n};\n\nint main() {\n    Truck myTruck;\n    myTruck.honk(); // Method from parent\n    cout << myTruck.brand << \" cap: \" << myTruck.cargoCapacity;\n    return 0;\n}",
+            "practiceTask": "Define a base class `Animal` with method `eat` printing 'Eating'. Create child `Cat` inheriting from `Animal`. Create Cat object in main and call `eat`.",
+            "practiceHint": "class Animal { public: void eat() { cout<<\"Eating\"; } }; class Cat: public Animal {}; Cat c; c.eat();",
+            "defaultCode": "#include <iostream>\nusing namespace std;\n\n// Write classes here\n\nint main() {\n    // Test code\n    return 0;\n}",
+            "expectedOutput": "Eating"
+          }
+        ],
+        "quiz": {
+          "id": "cpp_quiz",
+          "title": "C++ OOP Quiz",
+          "questions": [
+            {
+              "type": "mcq",
+              "question": "What is a Class in C++?",
+              "options": [
+                "An instance of an object",
+                "A template or blueprint for creating objects",
+                "A built-in variable type",
+                "A library package"
+              ],
+              "answer": "A template or blueprint for creating objects",
+              "explanation": "A Class is a user-defined data type that serves as the blueprint for objects, wrapping members and methods together."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript: The Director",
+    "icon": "🌐",
+    "description": "Learn JavaScript, the programming language that makes websites alive and interactive. Control button clicks, update texts on the fly, and fetch online info.",
+    "difficulty": "Beginner",
+    "xp": 300,
+    "weeks": [
+      {
+        "weekNumber": 1,
+        "title": "Week 1: Dynamic Websites",
+        "lessons": [
+          {
+            "id": "js_w1_l1",
+            "title": "Welcome to JS: The Web Page Director",
+            "analogyTitle": "The Theatre Director",
+            "analogyText": "HTML builds the theatre stage (walls, chairs). CSS paints the curtains and adds colored lights. JavaScript is the stage director: it tells actors when to enter, changes the props when a user presses a button, and responds to the audience clicking in real time!",
+            "content": "JavaScript is a lightweight programming language built into all web browsers. It lets you add interactive behavior to web pages.",
+            "codeExample": "console.log(\"Hello from JavaScript!\");\n\n// Simple page update\nlet title = \"Welcome to CodeVerse\";\nconsole.log(\"Web title updated to: \" + title);",
+            "practiceTask": "Write a line of code to log the sum of 10 and 20 using `console.log()`.",
+            "practiceHint": "console.log(10 + 20);",
+            "defaultCode": "// Log the sum here",
+            "expectedOutput": "30"
+          }
+        ]
+      },
+      {
+        "weekNumber": 2,
+        "title": "Week 2: Event Listeners",
+        "lessons": [
+          {
+            "id": "js_w2_l1",
+            "title": "Listening for Clicks",
+            "analogyTitle": "The Alarm Tripwire",
+            "analogyText": "Imagine placing a tripwire at the door. You sit in your chair reading a book. You don't do anything until someone trips the wire, triggering the alarm bells! An 'Event Listener' is that tripwire, waiting for the user to click a button to run your function.",
+            "content": "JavaScript interactive apps are built on events (clicks, keypresses, mouse movements). We use event handlers to execute code when events occur.",
+            "codeExample": "// Simulating a button click handler\ndefineButton(\"SubmitButton\", () => {\n    console.log(\"Button was clicked! Alarm sound!\");\n});\n\n// Run standard simulation\ntriggerClick(\"SubmitButton\");",
+            "practiceTask": "Log the text 'Click detected' to the console.",
+            "practiceHint": "console.log('Click detected');",
+            "defaultCode": "// Simulate click action logging 'Click detected'",
+            "expectedOutput": "Click detected"
+          }
+        ],
+        "quiz": {
+          "id": "js_quiz",
+          "title": "JavaScript Quiz",
+          "questions": [
+            {
+              "type": "mcq",
+              "question": "Which HTML tag is used to embed JavaScript inside a web page?",
+              "options": [
+                "<js>",
+                "<scripting>",
+                "<script>",
+                "<javascript>"
+              ],
+              "answer": "<script>",
+              "explanation": "The standard `<script>` tag is used to enclose or link JavaScript code in an HTML file."
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
