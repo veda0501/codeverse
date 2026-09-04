@@ -4,7 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 import { ShieldAlert, ArrowRight, KeyRound, Sparkles } from 'lucide-react';
 
 export default function Login() {
-  const { login, error, user, resetPassword } = useContext(AuthContext);
+  const { login, error, user, resetPassword, register } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
@@ -49,13 +49,9 @@ export default function Login() {
       // If demo account doesn't exist, we'll suggest registering or we can register it in background.
       // For testing, registering guest account:
       try {
-        const regResponse = await fetch('http://localhost:5000/api/auth/register', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name: 'Guest Explorer', email: demoEmail, password: demoPass })
-        });
-        if (regResponse.ok) {
-          success = await login(demoEmail, demoPass);
+        const successReg = await register('Guest Explorer', demoEmail, demoPass);
+        if (successReg) {
+          success = true;
         }
       } catch (err) {
         console.error(err);

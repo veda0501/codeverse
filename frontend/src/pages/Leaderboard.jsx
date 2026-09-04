@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { Trophy, Flame, Sparkles, Shield, Medal } from 'lucide-react';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 const RANK_COLORS = {
   0: { bg: 'rgba(255, 215, 0, 0.12)', border: '#FFD700', text: '#FFD700', label: '🥇' },
